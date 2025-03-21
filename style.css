@@ -1,0 +1,471 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: white;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #000;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffd700;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 0.3rem;
+    cursor: pointer;
+}
+
+.burger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    background: lightgray no-repeat center/cover;
+    color: black;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background: black;
+    color: white;
+    padding: 0.8rem 1.8rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+    background: #333;
+    transform: translateY(-3px);
+}
+
+/* Cards Section */
+.cards-container {
+    padding: 3rem;
+    background: #f9f9f9;
+}
+
+.cards-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: rgb(0, 0, 0);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+    color: black;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card h3 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.card p {
+    padding: 0 1rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 3rem;
+    background: #000;
+    color: white;
+    text-align: center;
+}
+
+.contact-section h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+}
+
+#contact-form button {
+    background: black;
+    border: none;
+    color: white;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background 0.3s;
+}
+
+#contact-form button:hover {
+    background: #333;
+}
+
+/* Footer */
+footer {
+    padding: 1.5rem;
+    background: #000;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-links.active {
+        display: flex;
+        background: #000;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        padding: 1rem;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+
+    .btn-primary {
+        padding: 0.6rem 1.4rem;
+    }
+
+    .cards-container h2 {
+        font-size: 2rem;
+    }
+
+    .card h3 {
+        font-size: 1.3rem;
+    }
+
+    .card p {
+        font-size: 0.8rem;
+    }
+
+    #contact-form button {
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: white;
+    opacity: 0; /* Comienza oculto */
+    animation: fadeInPage 1.5s ease-out forwards;
+}
+
+@keyframes fadeInPage {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Navbar */
+.navbar {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+.navbar .logo {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+.nav-links {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.6s;
+}
+
+/* Hero Section */
+.hero-section {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards 0.8s;
+}
+
+/* Cards */
+.cards-container {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards 1.5s;
+}
+
+/* Secciones de contacto y sobre nosotros */
+.contact-section {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards 2s;
+}
+
+.about-section {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards 2.5s;
+}
+
+/* Footer */
+footer {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards 3s;
+}
+
+/* Elementos del formulario */
+#contact-form input,
+#contact-form textarea,
+#contact-form button {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards 3.5s;
+}
+
+/* Animación de entrada suave */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación para los elementos del formulario en caso de estar en carga */
+#contact-form button.loading {
+    background-color: #ccc;
+    cursor: not-allowed;
+    position: relative;
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Asegúrate de tener un buen espaciado dentro de las tarjetas */
+.card p {
+    margin: 0.5rem 0;
+}
+
+/* Asegurando que los elementos dentro de la lista estén bien espaciados */
+.card ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Asegurando que el precio se vea destacado */
+.card p strong {
+    font-weight: bold;
+    color: #333;
+}
+
+.IMAGENDD {
+
+        border-radius: 10%;
+        align-items: center;
+      
+}
+
+a button {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    padding: 8px 16px; /* Reduce el tamaño del botón */
+    font-size: 14px; /* Reduce el tamaño de la fuente */
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transición suave */
+  }
+
+  /* Efecto al pasar el cursor */
+  a button:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.1); /* Agranda ligeramente el botón */
+  }
+
+  /* Efecto al hacer clic */
+  a button:active {
+    background-color: gray;
+    transform: scale(0.95); /* Reduce el tamaño del botón al hacer clic */
+  }
+
+  .formulario {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px; /* Tamaño máximo para el formulario */
+    margin: 0 auto;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input[type="email"], input[type="text"] {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#my-form-status {
+    font-size: 14px;
+    color: green;
+    margin-top: 10px;
+    text-align: center;
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitWebDesigns</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">GitWebDesigns</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#about">Acerca de</a></li>
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="https://t.me/GitWebDesigns">Contacto</a></li>
+        </ul>
+        <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <h1>Diseñamos Páginas Web Elegantes y Funcionales</h1>
+        <p>Ofrecemos soluciones de diseño web con HTML, CSS y JavaScript. ¡Haz crecer tu negocio con un sitio web único!
+        </p>
+        <a href="#contact" class="btn-primary">Contáctanos</a>
+        <br>
+        <img src="logo.png" class="IMAGENDD">
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="cards-container">
+            <h2>Acerca de Nosotros</h2>
+            <p>GitWebDesigns es una empresa recién iniciada, dedicada a ofrecer soluciones innovadoras en el diseño de
+                páginas web personalizadas. Nuestro enfoque se basa en crear sitios web a medida, utilizando un
+                directorio en GitHub que proporciona flexibilidad, escalabilidad y facilidad de gestión para nuestros
+                clientes. En GitWebDesigns, nos adaptamos completamente a los gustos y necesidades individuales de cada
+                cliente, asegurando que cada proyecto sea único y funcional, con un diseño que refleje la identidad de
+                su negocio o proyecto personal. Nos enorgullece ofrecer productos de alta calidad a precios accesibles,
+                brindando a nuestros clientes la posibilidad de tener una presencia web profesional sin tener que
+                comprometer su presupuesto. Además, trabajamos de la mano con nuestros clientes en cada etapa del
+                proceso, desde la concepción hasta el lanzamiento, para garantizar que su visión se haga realidad de
+                manera efectiva. Con GitWebDesigns, tendrás la tranquilidad de contar con un sitio web moderno,
+                fácil de gestionar y con el respaldo de un equipo comprometido con la excelencia.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="cards-container" id="services">
+        <h2>Servicios</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="basico.jpeg" alt="Diseño Web Básico">
+                <h3>Diseño Web Básico</h3>
+                <p>Creación de sitios web a medida para tu negocio o proyecto personal.</p>
+                <p><strong>Precio:</strong> $400 MXN</p>
+                <p><strong>Características:</strong></p>
+                <ul>
+                    <li>Diseño simple y personalizado en HTML/CSS.</li>
+                    <br>
+                    <li>Integración con GitHub para fácil gestión del contenido.</li>
+                    <br>
+                    <li>Página responsiva para móviles y tabletas.</li>
+                    <br>
+                    <li>Sin subpáginas.</li>
+                    <br>
+                    <li>Soporte técnico básico por 1 mes.</li>
+                    <br>
+                    <a href="https://t.me/GitWebDesigns" target="_blank">
+                        <button type="button">Estoy interesado.</button>
+                      </a>
+                      <p>.</p>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="intermedio.jpeg" alt="Diseño Web Intermedio">
+                <h3>Diseño Web Intermedio</h3>
+                <p>Diseño personalizado con funcionalidades básicas para una experiencia completa.</p>
+                <p><strong>Precio:</strong> $800 MXN</p>
+                <p><strong>Características:</strong></p>
+                <ul>
+                    <li>Diseño personalizado adaptado a dispositivos móviles.</li>
+                    <br>
+                    <li>Funcionalidades básicas interactivas con JavaScript.</li>
+                    <br>
+                    <li>Integración con GitHub para gestión del contenido.</li>
+                    <br>
+                    <li>Incluye hasta 3 subpáginas (por ejemplo: "Acerca de", "Servicios", "Contacto").</li>
+                    <br>
+                    <li>Soporte técnico por 1 mes.</li>
+                    <a href="https://t.me/GitWebDesigns" target="_blank">
+                        <button type="button">Estoy interesado.</button>
+                      </a>
+                      <br>
+                      <p>.</p>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="profesional.png" alt="Paquete Completo">
+                <h3>Paquete Completo</h3>
+                <p>Un diseño completamente personalizado y adaptable a todos los dispositivos.</p>
+                <p><strong>Precio:</strong> $1,200 MXN</p>
+                <p><strong>Características:</strong></p>
+                <ul>
+                    <li>Diseño completamente a medida y adaptable a cualquier dispositivo.</li>
+                    <br>
+                    <li>Funcionalidades interactivas básicas como formularios de contacto.</li>
+                    <br>
+                    <li>Integración con GitHub para fácil mantenimiento.</li>
+                    <br>
+                    <li>Incluye hasta 5 subpáginas (por ejemplo: "Inicio", "Acerca de", "Servicios", "Blog",
+                        "Contacto").</li>
+                    <br>
+                    <li>Soporte técnico por 2 meses.</li>
+                    <a href="https://t.me/GitWebDesigns" target="_blank">
+                        <button type="button">Estoy interesado.</button>
+                      </a>
+                      <br>
+                      <p>.</p>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+    <br>
+    <form id="my-form" action="https://formspree.io/f/xrbppqgl" method="POST" class="formulario">
+        <label>Email:</label>
+        <input type="email" name="email" />
+        <label>Mensaje:</label>
+        <input type="text" name="message" />
+        <button id="my-form-button">Enviar</button>
+        <br>
+        <p>Este mensaje le llegará a los desarrolladores.</p>
+        <p id="my-form-status"></p>
+      </form>
+      
+      <!-- Place this script at the end of the body tag -->
+      <script>
+        var form = document.getElementById("my-form");
+        
+        async function handleSubmit(event) {
+          event.preventDefault();
+          var status = document.getElementById("my-form-status");
+          var data = new FormData(event.target);
+          fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+          }).then(response => {
+            if (response.ok) {
+              status.innerHTML = "Thanks for your submission!";
+              form.reset()
+            } else {
+              response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                  status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                } else {
+                  status.innerHTML = "Oops! There was a problem submitting your form"
+                }
+              })
+            }
+          }).catch(error => {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+          });
+        }
+        form.addEventListener("submit", handleSubmit)
+      </script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 GitWebDesigns. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
