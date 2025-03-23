@@ -12,3 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     playMusic();
   });
   
+  function scrollToSection() {
+    const servicesSection = document.getElementById("services");
+    servicesSection.scrollIntoView({ behavior: "smooth" });
+}
