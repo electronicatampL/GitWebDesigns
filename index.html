@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitWebDesigns</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <script src="script.js"></script>
+  <link rel="icon" href="logo-removebg-preview.png" type="image/png">
+
+</head>
+
+<body>
+  <audio id="musica">
+    <source src="metro (mp3cut.net).mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo-removebg-preview.png" alt="Icono" class="logo-icon">
+      GitWebDesigns
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero">Inicio</a></li>
+      <li><a href="#about">Acerca de</a></li>
+      <li><a href="#services">Servicios</a></li>
+      <li><a href="https://t.me/GitWebDesigns">Contacto</a></li>
+    </ul>
+    <div class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+  <section class="hero-section" id="hero">
+    <h1>Diseñamos Páginas Web Elegantes y Funcionales</h1>
+    <br>
+    <p>Ofrecemos soluciones de diseño web con HTML, CSS y JavaScript. ¡Haz crecer tu negocio con un sitio web único!</p>
+    <br>
+    <img src="logo.png" class="IMAGENDD" alt="Logo GitWebDesigns">
+  </section>
+  <div class="btn-container">
+    <a href="https://t.me/GitWebDesigns" target="_blank">
+      <button type="button">Estoy interesado.</button>
+    </a>
+  </div>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <h2>Acerca de Nosotros</h2>
+    <div class="text-box">
+      <p>GitWebDesigns es una empresa recién iniciada, dedicada a ofrecer soluciones innovadoras en el diseño de páginas
+        web personalizadas.</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="cards-container" id="services">
+    <h2>Servicios</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="basico.jpeg" alt="Diseño Web Básico">
+        <br>
+        <h3>Diseño Web Básico</h3>
+        <br>
+        <p>Creación de sitios web a medida para tu negocio o proyecto personal.</p>
+        <p><strong>Precio:</strong> $400 MXN</p>
+        <br>
+        <br>
+        <ul>
+          <li>Diseño simple y personalizado en HTML/CSS.</li>
+          <br>
+          <li>Integración con GitHub para fácil gestión del contenido.</li>
+          <br>
+          <li>Página responsiva para móviles y tabletas.</li>
+          <br>
+          <li>Sin subpáginas.</li>
+          <br>
+          <li>Soporte técnico básico por 1 mes.</li>
+        </ul>
+        <br>
+        <a href="https://t.me/GitWebDesigns" target="_blank">
+          <button type="button">Estoy interesado.</button>
+        </a>
+      </div>
+
+      <div class="card">
+        <img src="intermedio.jpeg" alt="Diseño Web Intermedio">
+        <br>
+        <h3>Diseño Web Intermedio</h3>
+        <br>
+        <p>Diseño personalizado con funcionalidades básicas para una experiencia completa.</p>
+        <p>
+          <br>
+          <strong>Precio:</strong> $800 MXN
+        </p>
+        <ul>
+          <li>Diseño personalizado adaptado a dispositivos móviles.</li>
+          <br>
+          <li>Funcionalidades básicas interactivas con JavaScript.</li>
+          <br>
+          <li>Integración con GitHub para gestión del contenido.</li>
+          <br>
+          <li>Incluye hasta 3 subpáginas.</li>
+          <br>
+          <li>Soporte técnico por 1 mes.</li>
+        </ul>
+        <br>
+        <a href="https://t.me/GitWebDesigns" target="_blank">
+          <button type="button">Estoy interesado.</button>
+        </a>
+      </div>
+
+      <div class="card">
+        <img src="profesional.png" alt="Paquete Completo">
+        <br>
+        <h3>Paquete Completo</h3>
+        <br>
+        <p>Un diseño completamente personalizado y adaptable a todos los dispositivos.</p>
+        <br>
+        <p><strong>Precio:</strong> $1,200 MXN</p>
+        <ul>
+          <li>Diseño completamente a medida y adaptable a cualquier dispositivo.</li>
+          <br>
+          <li>Funcionalidades interactivas básicas como formularios de contacto.</li>
+          <br>
+          <li>Integración con GitHub para fácil mantenimiento.</li>
+          <br>
+          <li>Incluye hasta 5 subpáginas.</li>
+          <br>
+          <li>Soporte técnico por 2 meses.</li>
+          <br>
+        </ul>
+        <a href="https://t.me/GitWebDesigns" target="_blank">
+          <button type="button">Estoy interesado.</button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <script>
+    var form = document.getElementById("my-form");
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "Gracias por tu mensaje.";
+          form.reset();
+        } else {
+          status.innerHTML = "Error al enviar el formulario.";
+        }
+      }).catch(error => {
+        status.innerHTML = "Error en la conexión.";
+      });
+    }
+    form.addEventListener("submit", handleSubmit);
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const burger = document.querySelector(".burger");
+      const navLinks = document.querySelector(".nav-links");
+
+      burger.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+        burger.classList.toggle("active");
+      });
+    });
+
+  </script>
+   <style>
+    body {
+        background-color: black;
+        color: white;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        min-height: 200vh; /* Para probar el scroll */
+    }
+
+    #textoAnimado {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.5);
+        font-size: 60px;
+        font-weight: bold;
+        color: white;
+        text-shadow: 0px 0px 5px #ffffff, 0px 0px 15px #ccc, 0px 0px 30px #888;
+        background: linear-gradient(45deg, #ffffff, #888888, #333333, #000000);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
+        transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    }
+
+    /* Clases de animación */
+    .mostrar {
+        opacity: 1 !important;
+        transform: translate(-50%, -50%) scale(1) !important;
+    }
+
+    .ocultar {
+        opacity: 0 !important;
+        transform: translate(-50%, -50%) scale(0.5) !important;
+    }
+</style>
+</head>
+<body>
+
+
+<audio id="musica">
+    <source src="tu-cancion.mp3" type="audio/mp3">
+    Tu navegador no soporta audio.
+</audio>
+
+<div id="textoAnimado">¡METRO!</div>
+
+<script>
+    document.addEventListener("click", function () {
+        const audio = document.getElementById("musica");
+        const texto = document.getElementById("textoAnimado");
+
+        if (audio.paused) {
+            audio.play();
+
+            setTimeout(() => {
+                texto.classList.add("mostrar"); // Aparece con animación
+                setTimeout(() => {
+                    texto.classList.add("ocultar"); // Se desvanece después de 1s
+                }, 1500);
+            }, 950); // Se activa exactamente 1s después de iniciar la canción
+        }
+    }, { once: true }); // Se ejecuta solo una vez
+</script>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 GitWebDesigns. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
